@@ -29,10 +29,9 @@ loader.css({
       
       /* This line hide loader and show content */
       setTimeout(function(){
-        $('.content').fadeIn("slow");
-        (loader).fadeOut("fast");
+        $('.content').fadeIn("fast");
         /*Set time in milisec */
-      },3500);
+      },500);
     });
 
 }
