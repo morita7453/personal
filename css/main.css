@@ -35,11 +35,11 @@ a, a:hover {
 }
 
 .section-divider {
-	width: 47px;
-	height: 3px;
+	width: 48px;
+	height: 4px;
 	background-image: url('../images/divider.png');
 	background-repeat: no-repeat;
-	background-size: 47px 3px;
+	background-size: 48px 4px;
 	border:0;
 	text-align: center;
 	opacity: 0.3;
@@ -104,7 +104,6 @@ a, a:hover {
 	letter-spacing: -1px;
 	margin: 10px 0 20px 0;
 }
-}
 .avatar {
 	width: 100%;
 	display: block;
@@ -168,6 +167,7 @@ a, a:hover {
 	width: 20px;
 	height: 20px;
 	display: block;
+  padding-top: 1px;
 }
 @media screen and (max-width: 767px) {
     .introduction {
