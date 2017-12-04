@@ -25,7 +25,6 @@ h1,h2,h3,h4,h5,h6 {
 a, a:hover {
   text-decoration: none;
   color: #7ab800;
-  border-bottom: 1px solid #7ab800;
 }
 
 /* Custmize */
@@ -185,7 +184,7 @@ a, a:hover {
 	letter-spacing: -1px;
 }
     .bio {
-    margin: 40px 0; 
+    margin: 40px 0;
     }
     .avatar {
 	width: 100%;
@@ -269,7 +268,7 @@ a, a:hover {
 }
 .project-description {
 	width: 50%;
-	height: 100%; 
+	height: 100%;
 	display: block;
 	text-align: left;
 	float: left;
