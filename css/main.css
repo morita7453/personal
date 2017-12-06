@@ -25,6 +25,7 @@ h1,h2,h3,h4,h5,h6 {
 a, a:hover {
   text-decoration: none;
   color: #7ab800;
+  border-bottom: 1px solid #7ab800;
 }
 
 /* Custmize */
@@ -326,16 +327,20 @@ a, a:hover {
 	margin: 30px 10px;
 	display: inline-block;
 }
-.contact a.btn {
+.contact .button {
 	color: #fff;
 	line-height: 40px;
 	padding: 10px 30px;
 	background-color: #7ab800;
-	text-transform:uppercase;
+	text-transform: uppercase;
 	border-radius: 4px;
-	opacity: 1;
-	transition: opacity 0.25s linear;
 }
+
+.contact a {
+  opacity: 1;
+  transition: opacity 0.25s linear;
+}
+
 .contact a:hover {
 	opacity: 0.8;
 }
