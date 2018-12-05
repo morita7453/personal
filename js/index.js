@@ -37,3 +37,16 @@ loader.css({
 }
 
 loaderSpinner();
+
+/* Dark Mode */
+document.addEventListener("DOMContentLoaded", function () {
+    let toggle = document.querySelector("fieldset.toggle");
+    toggle.classList.toggle("hidden");
+});
+
+function darkModeListener() {
+   document.querySelector("body").classList.toggle("dark-mode");
+}
+
+document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
+

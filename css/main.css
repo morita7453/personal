@@ -1,5 +1,5 @@
 html, body {
-  background-color: #fff;
+  transition: color 0.25s, background-color 0.25s;
   margin: 0;
   padding: 0;
   font-family: "Proxima Nova", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", "STHeitiTC-Light", "Microsoft JhengHei", sans-serif;
@@ -9,6 +9,10 @@ html, body {
   min-width: 320px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+html *, html *:before, html *:after {
+  box-sizing: inherit;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -28,6 +32,85 @@ a, a:hover {
   border-bottom: 1px solid #7ab800;
 }
 
+
+/* Dark Mode */
+
+body.dark-mode {
+  background-color: #313131;
+  color: white;
+}
+
+body.dark-mode .project-description p {
+	color: rgba(256, 256, 256, 0.5);
+}
+
+body.dark-mode .project-title h2 {
+	color: white;
+}
+
+body.dark-mode .position {
+	color: white;
+}
+
+body.dark-mode .device {
+	color: white;
+}
+
+body.dark-mode .bio p {
+	color: rgba(256, 256, 256, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+fieldset.toggle input {
+  opacity: 0;
+}
+fieldset.toggle label {
+  display: inline-block;
+  line-height: 2;
+  position: relative;
+  z-index: 2;
+  margin-left: 3rem;
+}
+fieldset.toggle label::before, fieldset.toggle label::after {
+  content: "";
+  height: 1rem;
+  position: absolute;
+  left: 0;
+  top: calc((100% - 1rem) / 2);
+  margin-left: -3rem;
+  transition: -webkit-filter 0.25s;
+  transition: filter 0.25s;
+  transition: filter 0.25s, -webkit-filter 0.25s;
+}
+fieldset.toggle label::before {
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: #aaa;
+}
+fieldset.toggle label::after {
+  width: 1rem;
+  border-radius: 100%;
+  background-color: #000;
+  transition: margin-left 0.25s ease-in-out;
+}
+fieldset.toggle input:checked ~ label::after {
+  margin-left: -1.5rem;
+}
+fieldset.toggle input:checked ~ label::before, fieldset.toggle input:checked ~ label::after {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.mode-switch {
+	text-align: right;
+	margin-right: 40px;
+	line-height: 60px;
+}
+
+
 /* Custmize */
 .container {
 	width: 80%;
@@ -36,11 +119,11 @@ a, a:hover {
 }
 
 .section-divider {
-	width: 48px;
-	height: 4px;
+	width: 47px;
+	height: 3px;
 	background-image: url('../images/divider.png');
 	background-repeat: no-repeat;
-	background-size: 48px 4px;
+	background-size: 47px 3px;
 	border:0;
 	text-align: center;
 	opacity: 0.3;
@@ -54,6 +137,7 @@ a, a:hover {
   position: absolute;
 }
 
+/* 
 .content {
   text-align: center;
   height: 100vh;
@@ -61,6 +145,7 @@ a, a:hover {
   background: #fff;
   display: none;
 }
+*/
 
 .fade {
     -webkit-animation: fadein 4s ease 12s;
@@ -104,6 +189,7 @@ a, a:hover {
 	text-transform:uppercase;
 	letter-spacing: -1px;
 	margin: 10px 0 20px 0;
+}
 }
 .avatar {
 	width: 100%;
@@ -168,7 +254,6 @@ a, a:hover {
 	width: 20px;
 	height: 20px;
 	display: block;
-  padding-top: 1px;
 }
 @media screen and (max-width: 767px) {
     .introduction {
@@ -185,7 +270,7 @@ a, a:hover {
 	letter-spacing: -1px;
 }
     .bio {
-    margin: 40px 0;
+    margin: 40px 0; 
     }
     .avatar {
 	width: 100%;
@@ -269,7 +354,7 @@ a, a:hover {
 }
 .project-description {
 	width: 50%;
-	height: 100%;
+	height: 100%; 
 	display: block;
 	text-align: left;
 	float: left;
@@ -327,20 +412,16 @@ a, a:hover {
 	margin: 30px 10px;
 	display: inline-block;
 }
-.contact .button {
+.contact a.btn {
 	color: #fff;
 	line-height: 40px;
 	padding: 10px 30px;
 	background-color: #7ab800;
-	text-transform: uppercase;
+	text-transform:uppercase;
 	border-radius: 4px;
+	opacity: 1;
+	transition: opacity 0.25s linear;
 }
-
-.contact a {
-  opacity: 1;
-  transition: opacity 0.25s linear;
-}
-
 .contact a:hover {
 	opacity: 0.8;
 }
@@ -353,14 +434,12 @@ footer {
 	position: relative;
 	bottom: 0;
 	display: block;
-	float: left;
 	text-align: center;
 }
 footer p {
 	font-size: 13px;
 	font-weight: 600;
 	line-height: 60px;
-	color: #363636;
 	display: inline-block;
 	opacity: 0.6
 }
