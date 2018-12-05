@@ -40,6 +40,62 @@ body.dark-mode {
   color: white;
 }
 
+body.dark-mode img.logo {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/logo-white.svg");
+}
+
+body.dark-mode .section-divider {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/divider-white.png");
+}
+
+body.dark-mode .fb {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/facebook-white.svg");
+}
+
+body.dark-mode .twitter {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/twitter-white.svg");
+}
+
+body.dark-mode .ig {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/instagram-white.svg");
+}
+
+body.dark-mode .dribbble {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/dribbble-white.svg");
+}
+
+body.dark-mode .linkedin {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/linkedin-white.svg");
+}
+
+body.dark-mode .email {
+	content: "";
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: url("../images/email-white.svg");
+}
+
 body.dark-mode .project-description p {
 	color: rgba(256, 256, 256, 0.5);
 }
@@ -108,6 +164,14 @@ fieldset.toggle input:checked ~ label::before, fieldset.toggle input:checked ~ l
 	text-align: right;
 	margin-right: 40px;
 	line-height: 60px;
+}
+
+@media screen and (max-width: 767px) {
+	.mode-switch {
+	text-align: right;
+	margin-right: 20px;
+	line-height: 40px;
+}
 }
 
 
