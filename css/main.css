@@ -162,7 +162,7 @@ fieldset.toggle input:checked ~ label::before, fieldset.toggle input:checked ~ l
 
 .mode-switch {
 	text-align: right;
-	margin-right: 40px;
+	margin: 40px 40px 0 0;
 	line-height: 60px;
 }
 
@@ -230,6 +230,25 @@ fieldset.toggle input:checked ~ label::before, fieldset.toggle input:checked ~ l
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+}
+
+/* announce */
+.announce {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+	min-height: 40px;
+	background: #7ab800;
+}
+
+.announce p {
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+	line-height: 40px;
 }
 
 /* intro */
